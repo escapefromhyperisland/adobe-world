@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+* {
+    padding: 0;
+    letter-spacing: 1;
+    margin: 0;
+    font-family: 'Staatliches', cursive;
+}
+
+body {
+    background-color: #97B8EB;
+}
+
+
+.main {
+    display: none;
+}
+
+.load {
+    /*change these sizes to fit into your project*/
+    width: 100px;
+    height: 100px;
+}
+
+.load hr {
+    border: 0;
+    margin: 0;
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    border-radius: 50%;
+    animation: spin 2s ease infinite;
+}
+
+.load :first-child {
+    background: #ffffff;
+    animation-delay: -1.5s;
+}
+
+.load :nth-child(2) {
+    background: #ffffff;
+    animation-delay: -1s;
+}
+
+.load :nth-child(3) {
+    background: #ffffff;
+    animation-delay: -0.5s;
+}
+
+.load :last-child {
+    background: #ffffff;
+}
+
+@keyframes spin {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(160%);
+    }
+
+    50% {
+        transform: translate(160%, 160%);
+    }
+
+    75% {
+        transform: translate(0, 160%);
+    }
+}
+
+.center {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.money-info {
+
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 2em;
+    display: flex;
+    display: -webkit-box;
+}
+
+img {
+    padding-right: 1em;
+    width: 3em;
+    color: white;
+}
+
+.next-link{
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    text-decoration: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    z-index: 999;
+}
+
+.stats {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 80px;
+    width: 200px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coin {
+    height: 70%;
+    width: 70%;
+}
+
+
+
+.resize-text {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .resize {
+        display: none;
+    }
+
+    body {
+        background-color: #8995db;
+    }
+
+    .resize-text {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        font-size: 2.5rem;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke-width: 1.5px;
+        -webkit-text-stroke-color: rgb(255, 255, 255);
+    }
+}
