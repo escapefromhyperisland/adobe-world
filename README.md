@@ -2,7 +2,7 @@
 
 ### Backstory: 
 
-As the school year comes to end, an Adobe subscription is a matter of urgency. Instead of selling our kidneys for these costly digital things, and having learned the sacred secrets of the internet. We set forth on a rapidly growing journey...
+As the school year comes to end, an Adobe subscription is a matter of urgency. Instead of selling our kidneys for these costly digital things, and having learned the sacred secrets of the internet. You set forth on a rapidly growing journey...
 
 ---
 ### Tools Used:
