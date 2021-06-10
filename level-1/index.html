@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Drive for Photoshop</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./style/style.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="./assets/favIcon.png" />
+</head>
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/schteppe/cannon.js/master/build/cannon.js"></script>
+
+    <div class='introduction startGame'>
+        <h1>Adobe world</h1>
+        <p class='initialStory'>As the school is about to end, an adobe subscription is a matter of urgency. Instead of
+            selling our kidneys
+            for these costly digital things, and learning the sacred secrets of the internet. We set forth on a rapidly
+            growing journey.
+        </p>
+        <p class='gameStory'>After driving endlessly you notice a man on the side of the road with a large bag of gold.
+            You stop the car
+            and he challenges you to collect as many of them as possible and promises you a reward if you finish his
+            three challenges. </p>
+        <p class='gameInstructions'>You controll the car by using the joystick at the bottom. If you land upside down or
+            fall of the map, press
+            enter to restart.</p>
+        <button id="startBtn">Start Game</button>
+        <canvas></canvas>
+    </div>
+
+    <div class='stats'>
+        <div class="wrapper">
+            <div class='coin'>
+                <img src='./assets/krone.svg' alt='coin with dollar sign on it' />
+            </div>
+            <div class='money'></div>
+            <div class='totalMoney'></div>
+        </div>
+        <div class='ref'>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a
+                href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    </div>
+
+    <div class='instructions'>
+        <p>You steer with the JoyStick and if you fall over of fall from the map. Press Enter or the button below to
+            restart</p>
+        <button id="restart">Restart</button>
+    </div>
+
+    <div class='introduction betweenLevels'>
+        <h2 id="completedLevel"></h2>
+        <p id="levelDescription"></p>
+        <button id="startNextLevel"></button>
+    </div>
+
+    <div class='introduction endGame'>
+        <h2>You've completed the challenges!</h2>
+        <p>The man is impressed with how you completed the challenges and gives you 2500kr for the collected coins. You
+            move on with your journey towards running Photoshop on your Mac.
+        </p>
+        <button class='endGameBtn' onclick="nextWorld()">Continue your journey</button>
+    </div>
+
+    <div class='skipLevel'>
+        <button>If the challenge is to difficult, click here to skip it</button>
+    </div>
+
+    <script>
+        function nextWorld() {
+            window.parent.postMessage('nextLevel');
+        }
+    </script>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
