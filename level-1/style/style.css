@@ -119,6 +119,12 @@ button:hover {
   right: 5px;
   display: none;
 }
+p, h1, h2, img, button, .stats {
+  -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+}
 
 @keyframes animate {
   from { opacity: 0;} 
